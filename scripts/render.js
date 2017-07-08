@@ -20,6 +20,15 @@
     return elem;
   }
 
+  function getImageSrcByResolution(data) {
+    var ratio = window.devicePixelRatio || 1;
+    var screenSize = (innerWidth * innerHeight * ratio * ratio) / 3;
+
+    // return big image src if screen size larger then regular image
+    return (screenSize > data.regSize && data.srcBig) ?
+      data.srcBig : data.src;
+  }
+
   var content = document.querySelector('.content');
 
   window.images.forEach(function(image, index) {
@@ -44,9 +53,16 @@
 
   content.addEventListener('click', function(event) {
     var index = event.target.getAttribute('data-alias') || event.target.parentNode.getAttribute('data-alias');
-    if (index === null) return;
+
+    if (index === null) {
+      return;
+    }
+
+    var src = getImageSrcByResolution( window.images[index] );
+
     popup.classList.add('shown');
-    popup.querySelector('.popup__image').style.backgroundImage = 'url(' + window.images[index].src + ')';
+    popup.querySelector('.popup__image').style.backgroundImage = 'url(' + src + ')';
+    popup.querySelector('.popup__image-fake').setAttribute('src', src);
   });
 
   popup.addEventListener('click', function() {
