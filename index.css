@@ -102,10 +102,13 @@ body {
 }
 
 @media all and (min-width: 600px) {
+    .content {
+        padding: 40px 0;
+    }
     .image-item {
         height: 190px;
-        margin: 5px;
-        flex: 1 1 200px;
+        flex: 1 1 190px;
+        margin-bottom: 20px;
     }
     .image-item:nth-child(7n - 6) {
         flex-basis: 550px;

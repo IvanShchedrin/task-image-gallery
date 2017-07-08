@@ -43,7 +43,8 @@
   var popup = document.querySelector('.popup');
 
   content.addEventListener('click', function(event) {
-    var index = event.target.getAttribute('data-alias');
+    var index = event.target.getAttribute('data-alias') || event.target.parentNode.getAttribute('data-alias');
+    if (index === null) return;
     popup.classList.add('shown');
     popup.querySelector('.popup__image').style.backgroundImage = 'url(' + window.images[index].src + ')';
   });

@@ -87,10 +87,6 @@ var images = [{
   srcSmall: 'https://cdn.pixabay.com/photo/2013/09/29/12/38/cat-188088__180.jpg',
   title: 'Кот в снегу'
 },{
-  src: 'https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg',
-  srcSmall: 'https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262__180.jpg',
-  title: 'Кот-лизун'
-},{
   src: 'https://cdn.pixabay.com/photo/2015/03/29/11/05/cat-697113_1280.jpg',
   srcSmall: 'https://cdn.pixabay.com/photo/2015/03/29/11/05/cat-697113__180.jpg',
   title: 'Вот с зеркалом'
@@ -102,4 +98,8 @@ var images = [{
   src: 'https://cdn.pixabay.com/photo/2012/02/27/16/57/animal-17430_1280.jpg',
   srcSmall: 'https://cdn.pixabay.com/photo/2012/02/27/16/57/animal-17430__180.jpg',
   title: 'Орущий кот'
+},{
+  src: 'https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg',
+  srcSmall: 'https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262__180.jpg',
+  title: 'Кот-лизун'
 }];
